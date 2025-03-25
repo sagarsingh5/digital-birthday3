@@ -60,7 +60,7 @@ const BulbScreen = ({setScreen}) => {
   const [showMessageButton, setShowMessageButton] = useState(false);
   const [isShowingMessage, setIsShowingMessage] = useState(false);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-  const [messageAnimation, setMessageAnimation] = useState(false);
+  //const [messageAnimation, setMessageAnimation] = useState(false);
 
   const messages = [
     "Happy Birthday, my love! 💖 Today is all about you!",
@@ -100,15 +100,15 @@ const BulbScreen = ({setScreen}) => {
     };
   }, [bulbImages.length]);
 
-  useEffect(() => {
-    if (showMessageButton) {
-      setMessageAnimation(true);
-    }
+  // useEffect(() => {
+  //   if (showMessageButton) {
+  //     setMessageAnimation(true);
+  //   }
 
-    return () => {
-      setMessageAnimation(false);
-    };
-  }, [showMessageButton]);
+  //   return () => {
+  //     setMessageAnimation(false);
+  //   };
+  // }, [showMessageButton]);
 
   const backgrounds = [
     home1,
