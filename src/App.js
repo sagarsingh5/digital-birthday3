@@ -1,23 +1,14 @@
-import './App.css';
+import React, { useState } from 'react';
+import CelebrationScreen from './components/CelebrationScreen';
+import BulbScreen from './components/BulbScreen';
 
-function App() {
+const App = () => {
+  const [screen, setScreen] = useState(true)
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        {screen === true ? <CelebrationScreen setScreen ={setScreen}/> : <BulbScreen setScreen ={setScreen}/> }
     </div>
   );
-}
+};
 
 export default App;
